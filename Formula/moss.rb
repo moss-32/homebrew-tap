@@ -2,24 +2,24 @@ class Moss < Formula
   desc "Moss Fantasy Console"
   homepage "https://github.com/moss-32/moss"
 
-  version "0.1.2"
+  version "0.1.4"
 
   on_macos do
     on_arm do
       url "https://github.com/moss-32/moss/releases/download/v#{version}/moss-#{version}-macos-arm64.tar.gz"
-      sha256 "3e96ad3e6a7dc3196846b85e5cdc77e95e9bb3d8c47fac5c88a52aac1e873b08"
+      sha256 "a6b4ea09b0b17995ceea7626485789fd3b698a6ec3074c9a6f2727ff1f3bcf2b"
     end
 
     on_intel do
       url "https://github.com/moss-32/moss/releases/download/v#{version}/moss-#{version}-macos-x86_64.tar.gz"
-      sha256 "04f8aec714c4530794a12887f6d729f9312598dc012e2469b7efcaf4041583ff"
+      sha256 "b8b7bf25ed06c163b1168dfbd5ba97ef32ab1c9796bbffee53f51a9ac98d2f4f"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/moss-32/moss/releases/download/v#{version}/moss-#{version}-linux-x86_64.tar.gz"
-      sha256 "6ce205d958a3abf9fb9b7d5a6dc6a9235786c6d95338e250cfe19fc7896dfc80"
+      sha256 "05fa6afe84a133825074f10a7b863d28e510cb01ea2b7b1b203103b737e7cbc3"
     end
   end
 
