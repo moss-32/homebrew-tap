@@ -2,26 +2,29 @@ class Moss < Formula
   desc "Moss Fantasy Console"
   homepage "https://github.com/moss-32/moss"
 
-  version "0.1.4"
+  version "0.1.5"
 
-  on_macos do
-    on_arm do
-      url "https://github.com/moss-32/moss/releases/download/v#{version}/moss-#{version}-macos-arm64.tar.gz"
-      sha256 "a6b4ea09b0b17995ceea7626485789fd3b698a6ec3074c9a6f2727ff1f3bcf2b"
-    end
-
-    on_intel do
-      url "https://github.com/moss-32/moss/releases/download/v#{version}/moss-#{version}-macos-x86_64.tar.gz"
-      sha256 "b8b7bf25ed06c163b1168dfbd5ba97ef32ab1c9796bbffee53f51a9ac98d2f4f"
-    end
-  end
 
   on_linux do
     on_intel do
       url "https://github.com/moss-32/moss/releases/download/v#{version}/moss-#{version}-linux-x86_64.tar.gz"
-      sha256 "05fa6afe84a133825074f10a7b863d28e510cb01ea2b7b1b203103b737e7cbc3"
+      sha256 "acf5e92760e72e4cfa44633926d1968590ed439cd80b70cde01ddece022920aa"
     end
   end
+
+  on_macos do
+    on_arm do
+      url "https://github.com/moss-32/moss/releases/download/v#{version}/moss-#{version}-macos-arm64.tar.gz"
+      sha256 "91da88f9bcbd1fe204c9d7e9cb257b0302f5b07d5455245bfd1fdb78f46db331"
+    end
+
+    on_intel do
+      url "https://github.com/moss-32/moss/releases/download/v#{version}/moss-#{version}-macos-x86_64.tar.gz"
+      sha256 "dddbfe2e6dd99240994beb28e72f15d0981e345571f031082ce226657b4d3444"
+    end
+  end
+
+
 
 def install
     os = OS.mac? ? "macos" : "linux"
@@ -31,8 +34,4 @@ def install
     bin.install "moss-#{os}-#{arch}" => "moss"
   end
 
-  #test do
-    # verify the version of the binary
-  #  assert_match "moss v#{version}", shell_output("#{bin}/moss help")
-  #end
 end
