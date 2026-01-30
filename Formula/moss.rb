@@ -2,25 +2,31 @@ class Moss < Formula
   desc "Moss Fantasy Console"
   homepage "https://github.com/moss-32/moss"
 
-  version "0.1.5"
+  version "0.1.6"
 
 
   on_linux do
+
+    on_arm do
+      url "https://github.com/moss-32/moss/releases/download/v#{version}/moss-#{version}-linux-aarch64.tar.gz"
+      sha256 "8f819f612384bf803b91b0a4016d37a69c1ae583da3a4aaf43cafdf8fe075f92"
+    end
+
     on_intel do
       url "https://github.com/moss-32/moss/releases/download/v#{version}/moss-#{version}-linux-x86_64.tar.gz"
-      sha256 "acf5e92760e72e4cfa44633926d1968590ed439cd80b70cde01ddece022920aa"
+      sha256 "030b81f8df5681ab88d5f7f62dc74c5a87a1ac27ae0a8e5106c6fb1e1d0ad6bf"
     end
   end
 
   on_macos do
     on_arm do
       url "https://github.com/moss-32/moss/releases/download/v#{version}/moss-#{version}-macos-arm64.tar.gz"
-      sha256 "91da88f9bcbd1fe204c9d7e9cb257b0302f5b07d5455245bfd1fdb78f46db331"
+      sha256 "33d6a333e2b8c051bef4feff432df4d56fc23cf5e4bcbcbd9e89d2ad4e052d1c"
     end
 
     on_intel do
       url "https://github.com/moss-32/moss/releases/download/v#{version}/moss-#{version}-macos-x86_64.tar.gz"
-      sha256 "dddbfe2e6dd99240994beb28e72f15d0981e345571f031082ce226657b4d3444"
+      sha256 "bb98afa9efc6b3b39c31cdd5229c3ca599b931bf395878c819090ba0e3aab6b5"
     end
   end
 
